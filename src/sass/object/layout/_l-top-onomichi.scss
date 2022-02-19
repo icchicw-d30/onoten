@@ -1,0 +1,16 @@
+@use 'global' as *;
+@use "sass:math";
+@use "sass:color";
+
+.l-top-onomichi {
+  // margin-top: rem(-188);
+  // margin-top: -50%;
+  // margin-top: -45%;
+  padding-top: rem(145);
+  padding-bottom: rem(64);
+  @include mq(md) {
+    // margin-top: -20%;
+    padding-top: rem(310);
+    padding-bottom: rem(116);
+  }
+}

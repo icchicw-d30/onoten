@@ -1,0 +1,8 @@
+@use 'global' as *;
+@use "sass:math";
+@use "sass:color";
+
+.l-footer {
+  padding-top: rem(65);
+  padding-bottom: rem(95);
+}

@@ -1,0 +1,88 @@
+// @use 'global' as *;
+
+@use "sass:map";
+
+////////////////////
+// 色の指定
+////////////////////
+$background: #fff; // デフォルトの背景色
+
+$text-color: #333; // デフォルトのテキスト色
+$text-primary: #65AEE4; // テキストプライマリー色
+
+
+////////////////////
+// フォント設定
+////////////////////
+$font-family-base: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;// ベースフォント
+$font-family-sub: 'Noto Serif JP', serif;// ベースサブフォント
+$font-size-base: 16px; // ベースフォントサイズ
+$font-weight-base: 400; // ベースフォントウェイト
+$lh: 1.6; // ベース行間
+
+
+////////////////////
+// マウスホバー
+////////////////////
+$opacity: 0.7; // 透過度
+
+
+////////////////////
+// レイアウト
+////////////////////
+$l-tab: 768px; // タブレットサイズ
+$l-tabpc: 1024px; // タブレットサイズ〜PCサイズの境界
+$l-inner: 1000px; // インナー幅
+$l-pc: 1280px; // パソコン幅
+// メディアクエリ用変数
+$md: 768px; // 768px以上
+
+
+////////////////////
+// ブレークポイント
+////////////////////
+$breakpoints: (
+	"sp": "screen and (min-width: 375px)",
+	"md": "screen and (min-width: #{$md})",
+	"tab": "screen and (min-width: #{$l-tab})",
+	"pc": "screen and (min-width: #{$l-inner})",
+	"lg": "screen and (min-width: #{$l-pc})",
+	"tabpc": "screen and (min-width: #{$l-tab}) and (max-width: #{$l-tabpc - 1})",
+);
+
+
+////////////////////
+// メディアクエリー
+////////////////////
+@mixin mq($breakpoint: md) {
+	@media #{map.get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
+
+////////////////////
+// 非表示設定
+////////////////////
+
+// スマホ時表示
+.u-mobile {
+	@include mq(md) {
+		display: none;
+	}
+}
+
+// 768px以上で表示
+.u-desktop {
+	display: none;
+	@include mq(md) {
+		display: block;
+	}
+}
+
+
+////////////////////
+// 余白
+////////////////////
+$padding-pc: 25px; // 768px以上の余白
+$padding-sp: 20px; // スマホ時の余白

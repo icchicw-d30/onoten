@@ -1,0 +1,8 @@
+@use 'global' as *;
+@use "sass:math";
+@use "sass:color";
+
+.c-section-subtitle {
+  font-size: rem(13);
+  text-align: center;
+}

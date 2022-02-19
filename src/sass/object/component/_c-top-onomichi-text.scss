@@ -1,0 +1,9 @@
+@use 'global' as *;
+@use "sass:math";
+@use "sass:color";
+
+.c-top-onomichi-text {
+  font-size: rem(14);
+  font-weight: 600;
+  line-height: 2;
+}

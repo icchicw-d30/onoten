@@ -1,0 +1,49 @@
+@use 'global' as *;
+@use "sass:math";
+@use "sass:color";
+
+.c-hamburger {
+  z-index: 999;
+  cursor: pointer;
+}
+
+.c-hamburger span {
+  position: relative;
+  display: block;
+  background: #000;
+  height: rem(1);
+  width: rem(14);
+  transition: ease .5s;
+}
+.c-hamburger span:nth-child(1) {
+  // top: 0;
+  top: rem(2);
+}
+.c-hamburger span:nth-child(2) {
+  // margin: 6px 0;
+  margin: rem(5) 0;
+  // top: 0;
+  top: rem(2);
+}
+.c-hamburger span:nth-child(3) {
+}
+
+/* OPEN時の動き */
+.c-hamburger.open span:nth-child(1) {
+  // top: 6px;
+  top: rem(3);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.c-hamburger.open span:nth-child(2) {
+  // top: -8px;
+  // top: 0;
+  top: rem(-3);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.c-hamburger.open span:nth-child(3) {
+}
+
+
+

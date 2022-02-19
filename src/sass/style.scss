@@ -1,0 +1,9 @@
+@use "global/*" as *;
+@use "foundation/*" as *;
+@use "object/**/*" as *;
+
+
+.test {
+  font-size: 1.0rem;
+  color: $text-color;
+}

@@ -1,0 +1,35 @@
+@use 'global' as *;
+@use "sass:math";
+@use "sass:color";
+
+
+.p-header-nav{
+  
+}
+
+.p-header-nav__item{
+  @include mq(md) {
+    font-size: 12px;
+    height: inherit;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.p-header-nav__item:nth-child(n+2) {
+  @include mq(md) {
+    position: relative;
+    margin-left: rem(34);
+  }
+}
+.p-header-nav__item:nth-child(n+2)::before {
+  position: absolute;
+  display: block;
+  content: '';
+  background: #DEDEDE;
+  width: 1px;
+  height: 12px;
+  top: 50%;
+  left: rem(-17);
+  transform: translateY(-50%);
+}

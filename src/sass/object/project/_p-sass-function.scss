@@ -1,0 +1,21 @@
+@use 'global' as *;
+@use "sass:math";
+@use "sass:color";
+
+/* sass関数使用例 */
+
+.p-sass-function {
+	display: inline-block;
+	color: #FFF;
+
+
+	// background-color: rgba(0, 78, 245, 0.6); // 今後エラー
+	background-color: color.scale(#004ef5, $alpha: -40%);
+
+	// padding: (60px / 3); // エラー
+	padding: math.div(60px, 3);
+	padding: calc(60px / 3);
+
+
+	margin-bottom: rem(100);
+}

@@ -1,0 +1,10 @@
+@use 'global' as *;
+@use "sass:math";
+@use "sass:color";
+
+.l-cta-onoten {
+  padding-bottom: rem(60);
+  @include mq(md) {
+    padding-bottom: rem(280);
+  }
+}

@@ -1,0 +1,11 @@
+@use 'global' as *;
+@use "sass:math";
+@use "sass:color";
+
+.l-top-flavor {
+  padding-bottom: rem(40);
+  @include mq(md) {
+    padding-top: rem(60);
+    padding-bottom: rem(180);
+  }
+}

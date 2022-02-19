@@ -1,0 +1,33 @@
+@use 'global' as *;
+@use "sass:math";
+@use "sass:color";
+
+
+
+.p-news-item{
+  text-align: center;
+}
+
+.p-news-item__link {
+
+}
+
+.p-news-item__date,
+.p-news-item__link {
+  // text-align: center;
+}
+
+.p-news-item__date{
+  font-size: rem(13);
+  letter-spacing: 0.08em;
+  line-height: calc(22 / 13);
+  display: block;
+}
+
+.p-news-item__link {
+  font-size: rem(15);
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  line-height: calc(26 / 15);
+  text-decoration: underline;
+}

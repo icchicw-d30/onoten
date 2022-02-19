@@ -1,0 +1,14 @@
+@use 'global' as *;
+@use "sass:math";
+@use "sass:color";
+
+.p-section-title {
+
+}
+
+.p-section-title__subtitle{
+  margin-top: rem(15);
+  @include mq(md) {
+    margin-top: rem(20);
+  }
+}

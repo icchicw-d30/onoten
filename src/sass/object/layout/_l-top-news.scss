@@ -1,0 +1,13 @@
+@use 'global' as *;
+@use "sass:math";
+@use "sass:color";
+
+.l-top-news {
+  padding-top: rem(100);
+  padding-bottom: rem(100);
+  @include mq(md) {
+    padding-top: rem(120);
+    padding-bottom: rem(120);
+    
+  }
+}

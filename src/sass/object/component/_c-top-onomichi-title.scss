@@ -1,0 +1,10 @@
+@use 'global' as *;
+@use "sass:math";
+@use "sass:color";
+
+.c-top-onomichi-title {
+  font-size: rem(20);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1.7;
+}

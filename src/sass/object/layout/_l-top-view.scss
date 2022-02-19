@@ -1,0 +1,15 @@
+@use 'global' as *;
+@use "sass:math";
+@use "sass:color";
+
+.l-top-view {
+  padding-top: rem(60);
+  // padding-bottom: rem(135);
+  // padding-bottom: 37.334%;
+  padding-bottom: min(37.334%, 201.594px); // 最大値は201.594px
+  margin-top: 104px;
+  @include mq(md) {
+    // padding-bottom: 15%;
+    padding-bottom: rem(200);
+  }
+}

@@ -1,0 +1,55 @@
+@use 'global' as *;
+@use "sass:math";
+@use "sass:color";
+
+
+.p-top-onomichi {
+  // position: relative;
+}
+
+.l-inner.p-top-onomichi__inner {
+  padding-left: 60px;
+  padding-right: 0;
+}
+
+
+.p-top-onomichi__img{
+//   position: absolute;
+//   top: -50%;
+display: flex;
+justify-content: center;
+padding: 0 rem(20);
+}
+.p-top-onomichi__img img{
+//   position: absolute;
+//   top: -50%;
+  @include mq(md) {
+    max-width: rem(510);
+    width: 100%;
+  }
+}
+
+.p-top-onomichi__content{
+  // margin-top: rem(-50);
+  @include mq(md) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.p-top-onomichi__content-wrap:first-child .p-top-onomichi__text:nth-child(2) {
+  margin-top: rem(50);
+}
+.p-top-onomichi__content-wrap:nth-child(2) {
+  @include mq(md) {
+    margin-left: rem(80);
+  }
+}
+
+.p-top-onomichi__text{
+  margin-top: rem(10);
+}
+
+
+
+

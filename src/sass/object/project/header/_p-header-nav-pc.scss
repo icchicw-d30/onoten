@@ -1,0 +1,14 @@
+@use 'global' as *;
+@use "sass:math";
+@use "sass:color";
+
+
+.p-header-nav-pc{
+  display: flex;
+}
+
+.p-header-nav-pc__link{
+  height: inherit;
+  display: flex;
+  align-items: center;
+}

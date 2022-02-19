@@ -1,0 +1,38 @@
+@use 'global' as *;
+@use "sass:math";
+@use "sass:color";
+
+
+
+.p-top-news{
+  background-image: url(../img/news/news-bg_sp.jpg);
+  background-size: cover;
+  @include mq(md) {
+    background-image: url(../img/news/news-bg_pc.jpg);
+    
+  }
+}
+
+.p-top-news__title{
+  
+}
+
+.p-top-news__items {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(60);
+  }
+}
+
+.p-top-news__item {
+  
+}
+
+.p-top-news__item:nth-child(n+2) {
+  margin-top: rem(30);
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+} 
+
+

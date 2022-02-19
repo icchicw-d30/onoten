@@ -1,0 +1,54 @@
+@use 'global' as *;
+@use "sass:math";
+@use "sass:color";
+
+
+
+.p-falvor-item{
+
+}
+
+.p-falvor-item__link {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-falvor-item__title,
+.p-falvor-item__price {
+  font-size: rem(13);
+}
+
+.p-falvor-item__title {
+  order: 2;
+  text-transform: uppercase;
+  line-height: calc(22 / 13);
+  margin-top: rem(20);
+  @include mq(md) {
+    margin-top: rem(19);
+  }
+}
+
+.p-falvor-item__price{
+  order: 3;
+  font-weight: bold;
+  margin-top: rem(12);
+  @include mq(md) {
+    margin-top: rem(10);
+  }
+}
+
+.p-falvor-item__img{
+  order: 1;
+}
+.p-falvor-item__img {
+  padding-top: 100%;
+  position: relative;
+}
+.p-falvor-item__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -1,0 +1,54 @@
+@use 'global' as *;
+@use "sass:math";
+@use "sass:color";
+
+
+.c-arrow-top {
+  // display: inline-block;
+  // width: rem(12);
+  // height: rem(12);
+  // // margin: 0 10px;
+  // border-top: rem(1) solid #fff;
+  // border-left: rem(1) solid #fff;
+  // position: relative;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%) rotate(45deg);
+  // content: '';
+  // transition: .4s all;
+}
+
+.c-arrow-top--custom{
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  @include mq(md) {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.c-arrow-top--custom::before,
+.c-arrow-top--custom::after{
+  content: "";
+  display: block;
+  width: 15px;/*線の長さ*/
+  height: 1px;/*線の太さ*/
+  background: #fff;/*線の色*/
+  position: absolute;
+  top: calc(50%);
+  border-radius: 100px;
+  transform-origin:calc(100% - 5px) 50%;
+}    
+.c-arrow-top--custom::before{
+  top: calc(50% - 2.5px);
+  right: calc(35% + 2.5px);
+  transform: rotate(-70deg);
+  // transform: rotate(-30deg);
+}
+.c-arrow-top--custom::after{
+  top: calc(50% + 2.5px);
+  right: calc(35% - 2.5px);
+  transform: rotate(70deg);
+}

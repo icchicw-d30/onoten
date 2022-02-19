@@ -1,0 +1,20 @@
+@use 'global' as *;
+@use "sass:math";
+@use "sass:color";
+
+.p-page-top {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  display: none; //非表示デフォルト
+  @include mq(md) {
+    // right: rem(32);
+    // bottom: rem(27);
+  }
+  // 1280px以上はコンテンツ内に収める
+  @include mq(lg) {
+    // 50% - コンテンツ幅 / 2
+    right:calc(50% - #{rem(1280)} / 2  );
+  }
+}

@@ -1,0 +1,9 @@
+@use 'global' as *;
+@use "sass:math";
+@use "sass:color";
+
+.c-btn {
+  padding: rem(10) rem(40);
+  background-color: black;
+  color: white;
+}

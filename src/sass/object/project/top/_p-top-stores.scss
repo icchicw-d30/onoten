@@ -1,0 +1,50 @@
+@use 'global' as *;
+@use "sass:math";
+@use "sass:color";
+
+
+.p-top-stores{
+  padding-top: rem(120);
+  padding-bottom: rem(120);
+}
+
+.p-top-stores__inner.l-inner {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+
+
+.p-top-stores__title {
+  
+}
+
+
+.p-top-stores__items{
+  margin-top: rem(40);
+  @include mq(md) {
+    display: flex;
+    justify-content: center;
+    max-width: 840px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: rem(60);
+  }
+}
+
+.p-top-stores__item{
+  @include mq(md) {
+    max-width: rem(410);
+    width: 100%;
+  }
+}
+.p-top-stores__item:nth-child(n+2){
+  margin-top: rem(30);
+  @include mq(md) {
+    width: calc( ( 100% - #{rem(20)} ) / 2 );
+    margin-left: rem(20);
+    margin-top: initial;
+  }
+}
+

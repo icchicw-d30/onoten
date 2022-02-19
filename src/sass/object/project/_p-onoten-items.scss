@@ -1,0 +1,71 @@
+@use 'global' as *;
+@use "sass:math";
+@use "sass:color";
+
+
+
+
+.p-onoten-items{
+  // margin-left: rem(-15);
+  // margin-top: rem(-30);
+  // margin-top: rem(30);
+  margin-top: rem(60);
+}
+
+.p-onoten-items__item{
+  display: flex;
+  width: calc(100% / 3);
+  // padding-left: rem(15);
+  @include mq(md) {
+    width: calc(100% / 6);
+  }
+  // padding-top: rem(30);
+}
+.p-onoten-items__item:nth-child(n+4){
+  margin-top: rem(30);
+  @include mq(md) {
+    margin-top: initial;
+  }
+}
+
+
+.p-onoten-items__img {
+  padding-top: 131.3%;
+  position: relative;
+  // width: 100%;
+  width: 65%;
+  height: 100%;
+  @include mq(md) {
+    padding-top: 128.3%;
+  }
+}
+.p-onoten-items__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 8px 16px -2px rgba(10,10,10,0.1), 6px 6px 5px 3px rgba(0,0,0,0.05);
+  // object-fit: cover;
+  // object-fit: contain;
+}
+.p-onoten-items__img::before {
+  // content: '';
+  // position: absolute;
+  // top: rem(5);
+  // left: rem(5);
+  // opacity: .3;
+  // width: 100%;
+  // height: 100%;
+  // background: url(../img/onten/onoten-shadow.jpg) no-repeat center;
+}
+
+.p-onoten-items__text{
+  font-size: rem(10);
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  writing-mode: vertical-rl;
+  @include mq(md) {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,19 @@
+@use 'global' as *;
+@use "sass:math";
+@use "sass:color";
+
+.p-header-menu-sp {
+
+}
+
+.p-header-menu-sp__item{
+  // width: rem(45);
+  height: inherit;
+}
+
+
+
+.p-header-menu-sp__item:nth-child(n+2) {
+  // margin-left: rem(20);
+}
+

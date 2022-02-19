@@ -1,0 +1,10 @@
+@use 'global' as *;
+@use "sass:math";
+@use "sass:color";
+
+
+.p-header-menu-pc{
+  @include mq(md) {
+    display: flex;
+  }
+}

@@ -1,0 +1,13 @@
+@use 'global' as *;
+@use "sass:math";
+@use "sass:color";
+
+
+.p-footer-item {
+  font-size: rem(12);
+  letter-spacing: 0.08em;
+  line-height: calc(21 / 12);
+  @include mq(md) {
+    font-size: 12px;
+  }
+}

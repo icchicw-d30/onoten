@@ -1,0 +1,42 @@
+@use 'global' as *;
+@use "sass:math";
+@use "sass:color";
+
+
+
+.p-stores-item{
+  
+}
+
+.p-stores-item__link{
+  display: flex;
+  flex-direction: column;
+}
+
+.p-stores-item__title{
+  order: 2;
+  font-size: rem(13);
+  margin-top: rem(10);
+}
+
+.p-stores-item__img{
+  order: 1;
+}
+.p-stores-item__img {
+  position: relative;
+  width: 100%;
+}
+
+.p-stores-item__img {
+  padding-top: calc( 144 / 255 * 100% );
+  position: relative;
+}
+.p-stores-item__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+

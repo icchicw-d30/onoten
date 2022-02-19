@@ -1,0 +1,103 @@
+@use 'global' as *;
+@use "sass:math";
+@use "sass:color";
+
+
+/* アクセシビリティ対応ドロワーメニュー */
+.p-hamburger {
+  width: rem(30);
+  height: rem(20);
+  transition: ease .3s;
+  position: relative;
+  margin: auto;
+  box-shadow: 0 0 2rem transparent;
+  z-index: 999;
+
+  background: transparent;
+  border: none;
+  padding: 0;
+
+  @include mq(md) {
+    display: none;
+  }
+}
+
+// ドロワーボタンの背景色 true:開いてる時 false:閉じてる時
+.p-hamburger[aria-expanded="true"],
+.p-hamburger[aria-expanded="false"] {
+  background: none;
+}
+
+/* ドロワーボタンfocus時 */
+.p-hamburger:focus .p-hamburger__line,
+.p-hamburger:focus .p-hamburger__line::before,
+.p-hamburger:focus .p-hamburger__line::after {
+  box-shadow: 0 0 10px 2px $text-primary;
+}
+
+/* ハンバーガー真ん中のライン */
+.p-hamburger__line {
+  position: absolute;
+  // right: 0;
+  width: rem(14);
+  height: 1px;
+  background-color: #000;
+  background-color: transparent;
+  transition: ease .3s;
+}
+
+/* ハンバーガー上下のライン */
+.p-hamburger__line::before,
+.p-hamburger__line::after {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  background-color: #000;
+  content: '';
+  transition: ease .3s;
+}
+/* ハンバーガー上のラインの位置 */
+.p-hamburger__line::before {
+  top: -3px;
+}
+/* ハンバーガー下のラインの位置 */
+.p-hamburger__line::after {
+  top: 3px;
+}
+
+/* ドロワーメニューオープン時のハンバーガー真ん中ライン */
+.p-hamburger[aria-expanded="true"] .p-hamburger__line {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* ドロワーメニューオープン時のハンバーガー上下ライン */
+.p-hamburger[aria-expanded="true"] .p-hamburger__line::before,
+.p-hamburger[aria-expanded="true"] .p-hamburger__line::after {
+  top: 0;
+  background-color: #000;
+}
+
+/* ドロワーメニューオープン時のハンバーガー上ラインの回転 */
+.p-hamburger[aria-expanded="true"] .p-hamburger__line::before {
+  transform: rotate(45deg);
+}
+
+/* ドロワーメニューオープン時のハンバーガー下ラインの回転 */
+.p-hamburger[aria-expanded="true"] .p-hamburger__line::after {
+  transform: rotate(-45deg);
+}
+
+.p-hamburger__hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+}

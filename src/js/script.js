@@ -72,7 +72,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       $('.js-drawer-menu').removeClass('click-close');
       //  iosスクロール許可(スクロール停止を停止)
       $('body').css('overflow','');
-      window.removeEventListener( 'touchmove' , move, { passive: false } );
+      // window.removeEventListener( 'touchmove' , move, { passive: false } );
     }
   });
   //PCサイズの時
@@ -96,7 +96,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         $('.js-drawer-menu').fadeOut();
         //  iosスクロール許可(スクロール停止を停止)
         $('body').css('overflow','');
-        window.removeEventListener( 'touchmove' , move, { passive: false } );
+        // window.removeEventListener( 'touchmove' , move, { passive: false } );
       });
     }
   });
@@ -111,12 +111,13 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         $('.js-drawer-menu.click-close').fadeOut();
         // スクロール停止の処理リセット
         $('body').css('overflow','unset');
-        window.removeEventListener( 'touchmove' , move , { passive: false } );
+        // window.removeEventListener( 'touchmove' , move , { passive: false } );
       });
     } else {
       $('.js-drawer-menu').removeClass('click-close');
     }
   });
+
 
   // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
   $(document).on('click', 'a[href*="#"]', function () {
